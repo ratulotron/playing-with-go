@@ -3,18 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	var a string = "initial"
+	var a 		string	= "initial"
+	int b, c 				= 1, 2
+	var d 		bool
+	var e 		int
+	f := "short"
+
 	fmt.Println(a)
-
-	var b, c int = 1, 2
 	fmt.Println(b, c)
-
-	var d bool
 	fmt.Println(d)
 
-	var e int
 	fmt.Println(e)
 
-	f := "short"
 	fmt.Println(f)
 }
