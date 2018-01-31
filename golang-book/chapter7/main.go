@@ -20,8 +20,8 @@ func add(args ...float64) float64 {
 }
 
 func main() {
-	xs := []float64{1, 1, 1, 1, 1}
+	xs := []float64{1, 2, 3, 4, 5}
 
 	fmt.Println(average(xs))
-	fmt.Println(add(1))
+	fmt.Println(add(xs...)) // array... means expanded version of this
 }
