@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func average(xs []float64) float64 {
 	//panic("Not implemented")
@@ -24,4 +26,33 @@ func main() {
 
 	fmt.Println(average(xs))
 	fmt.Println(add(xs...)) // array... means expanded version of this
+
+	// Closures
+	x := 0
+	increment := func() int {
+		x++
+		return x
+	}
+	fmt.Println(increment())
+	fmt.Println(increment())
+
+	// Defer, Panic & Recover
+	// defer second()
+	// first()
+
+	// Panic & Recover
+	defer func() {
+		str := recover() // used to handle run time panics
+		fmt.Println(str)
+	}()
+	panic("PANIC")
+
+}
+
+func first() {
+	fmt.Println("1st")
+}
+
+func second() {
+	fmt.Println("2nd")
 }
