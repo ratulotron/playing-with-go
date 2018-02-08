@@ -48,12 +48,8 @@ func askQuestion(question *Question) (isCorrect bool) {
 	check(err)
 
 	if question.Answer == answer {
-		//fmt.Println("Oh yes")
 		question.IsCorrect = true
-		// } else {
-		// 	fmt.Println("WTF man")
 	}
-
 	return isCorrect
 }
 
@@ -65,17 +61,13 @@ func main() {
 
 	// Loads all the problems in the program
 	questions := loadQuestions(*filename)
-	// fmt.Println(questions[0])
-	// askQuestion(&questions[0])
-	// fmt.Println(questions[0])
 
+	result := 0
 	for key, question := range questions {
 		fmt.Printf("Problem #%d: ", key+1)
-		askQuestion(&question)
+		if askQuestion(&question) {
+			result++
+		}
 	}
-
-	for _, question := range questions {
-		fmt.Println(question)
-	}
-
+	fmt.Println("Correctly answered: ", result)
 }
