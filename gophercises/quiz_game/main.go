@@ -74,5 +74,8 @@ func main() {
 		askQuestion(&question)
 	}
 
-	fmt.Printf(questions)
+	for _, question := range questions {
+		fmt.Println(question)
+	}
+
 }
