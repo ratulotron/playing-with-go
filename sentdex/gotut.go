@@ -1,14 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+type car struct {
+	gaspedal uint16
+}
 
 func main() {
-	x := 15
-	a := &x // memory address
-	fmt.Println(a)
-	fmt.Println(*a)
-	*a = 5
-	fmt.Println(x)
+
 }
