@@ -1,8 +1,9 @@
+//$GOPATH/src/mathapp/main.go source code.
 package main
 
 import (
 	"fmt"
-	"playing-with-go/build-web-application-with-golang/mymath"
+	"playing-with-go/build-web-app/mymath"
 )
 
 func main() {

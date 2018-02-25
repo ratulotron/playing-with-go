@@ -1,3 +1,4 @@
+// Source code of $GOPATH/src/mymath/sqrt.go
 package mymath
 
 func Sqrt(x float64) float64 {
