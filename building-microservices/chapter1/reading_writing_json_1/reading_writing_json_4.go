@@ -31,12 +31,6 @@ func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// err = json.Unmarshal(body, &request)
-	// if err != nil {
-	// 	http.Error(w, "Bad request", http.StatusBadRequest)
-	// 	return
-	// }
-
 	response := helloWorldResponse{
 		Message: "Hello " + request.Name,
 		Author:  "Ratul",
