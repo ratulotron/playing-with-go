@@ -38,6 +38,7 @@ func main() {
 	)
 	utils.FailOnError(err, "Failed to register a consumer")
 
+	// What does this do?
 	forever := make(chan bool)
 
 	go func() {
