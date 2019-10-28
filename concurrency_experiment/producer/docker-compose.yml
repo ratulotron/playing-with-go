@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  consul:
+    container_name: bg_task_consul
+    image: consul:latest
+    ports:
+      - 8500:8500
+  mysql:
+    container_name: bg_task_mysql
+    image: mysql:5.7
+    environment:
+      - "MYSQL_ROOT_PASSWORD=12345"
+      - "MYSQL_DATABASE=bg_task"
+    ports:
+      - 3306:3306    
+  web:
+    build: .

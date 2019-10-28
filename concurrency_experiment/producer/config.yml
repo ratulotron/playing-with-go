@@ -1,0 +1,6 @@
+database:
+  username: "root"
+  pasword: "12345"
+  host: "bg_task_mysql"
+  port: 3306
+	name: "bg_task"
